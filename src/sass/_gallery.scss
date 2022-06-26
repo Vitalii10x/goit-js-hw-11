@@ -16,24 +16,27 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px 0;
-    background: #ffffff;
+    background: #5f8fff;
 }
 
 #search-form input {
     padding: 5px;
     height: 30px;
-    border-radius: 5px;
-    border-color: #a8a8a8;
+    border-radius: 5px 0 0 5px;
+    border-color: transparent;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    outline: none;
+    border: none;
 }
 
 #search-form button {
-    position: absolute;
-    top: 5px;
-    right: 0;
-    background-color: transparent;
     border: none;
-
+    border-radius: 0 5px 5px 0;
+    color: white;
+    background: rgb(222, 222, 222);
+    cursor: pointer;
 }
+
 .gallery-container {
     padding-bottom: 60px;
 }
@@ -56,6 +59,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: end;
+    transition: 250ms ease-out;
+    &:hover,
+    &:focus {
+        transform: scale(1.1);}
 }
 
 .photo-card a {
@@ -82,7 +89,7 @@ body {
 }
 
 .load-more {
-    background: #4848e8;
+    background: #4a80ff;
     color: white;
     padding: 8px 26px;
     border: none;
@@ -90,4 +97,9 @@ body {
     display: none;
     margin: 0 auto;
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+    background-color: #185dff;
+    }
 }
